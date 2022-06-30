@@ -3,6 +3,7 @@ package com.dubbo.sample.comsumer.springclouddubboconsumer.service;
 import com.service.IUserService;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.UnsupportedJwtException;
+import org.apache.dubbo.config.annotation.Service;
 
 import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
@@ -11,6 +12,7 @@ import java.util.Map;
 /**
  * @author parry
  */
+@Service
 public class MockServiceImpl implements IUserService {
 
 
