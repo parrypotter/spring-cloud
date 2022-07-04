@@ -3,12 +3,16 @@ server:
 
 eureka:
   instance:
-    hostname: localhost
+    hostname: 101.35.104.222
+    # 用于定义服务失效的时间，默认为90S
+    lease-expiration-duration-in-seconds: 90
+    # 用于定义服务续约的调用间隔。默认为30S
+    lease-renewal-interval-in-seconds: 30
 
   # 代表不向注册中心注册自己=false
   # 由于注册中心的职责就是维护服务实例，并不需要去检索服务，所以也设置为false
   client:
-    register-with-eureka: false
-    fetch-registry: false
+    register-with-eureka: true
+    fetch-registry: true
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
