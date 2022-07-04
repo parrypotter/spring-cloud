@@ -8,6 +8,6 @@ eureka:
     hostname: eureka-server1
   client:
     service-url:   #  eureka server 的地址， 咱们单实例模式就写自己好了
-      defaultZone:  http://eureka-server2:9092/eureka
+      defaultZone:  http://eureka-server2:9002/eureka
     register-with-eureka: true  # 不向eureka server 注册自己
     fetch-registry: true  # 不向eureka server 获取服务列表
